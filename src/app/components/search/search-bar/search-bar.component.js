@@ -1,10 +1,9 @@
 var searchBar = {
-  // bindings: {
-  //   user: '<',
-  //   button: '@',
-  //   message: '@',
-  //   onSubmit: '&'
-  // },
+  bindings: {
+    keyword: '<',
+    button: '@',
+    onSubmit: '&'
+  },
   templateUrl: './search-bar.html',
   controller: 'SearchBarController'
 };

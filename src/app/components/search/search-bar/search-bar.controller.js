@@ -1,20 +1,16 @@
 function SearchBarController(SearchService, $state) {
   var ctrl = this;
-  ctrl.$onInit = function () {
-    ctrl.error = null;
-    ctrl.user = {
-      email: '',
-      password: ''
-    };
+  ctrl.$onChanges = function (changes) {
+    if (changes.keyword) {
+      ctrl.keyword = angular.copy(ctrl.keyword);
+    }
   };
-  ctrl.loginUser = function (event) {
-    return AuthService
-      .login(event.user)
-      .then(function () {
-        $state.go('app');
-      }, function (reason) {
-        ctrl.error = reason.message;
-      });
+  ctrl.submitForm = function () {
+    ctrl.onSubmit({
+      $event: {
+        keyword: ctrl.keyword
+      }
+    });
   };
 }
 
