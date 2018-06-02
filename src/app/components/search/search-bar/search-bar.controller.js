@@ -5,12 +5,8 @@ function SearchBarController(SearchService, $state) {
       ctrl.keyword = angular.copy(ctrl.keyword);
     }
   };
-  ctrl.submitForm = function () {
-    ctrl.onSubmit({
-      $event: {
-        keyword: ctrl.keyword
-      }
-    });
+  ctrl.submit = function () {
+    $state.go('results');
   };
 }
 

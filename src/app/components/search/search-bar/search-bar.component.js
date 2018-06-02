@@ -11,13 +11,14 @@ var searchBar = {
 angular
   .module('components.search')
   .component('searchBar', searchBar)
-  .config(function ($stateProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('search', {
-				url: '/app',
+        parent: 'app',
+				url: 'search',
 				component: 'search'
 
 				// template: '<search></search>'
 			});
-		// $urlRouterProvider.otherwise('/app');
+		$urlRouterProvider.otherwise('search');
 	});
