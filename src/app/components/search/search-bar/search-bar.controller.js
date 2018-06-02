@@ -16,6 +16,18 @@ function SearchBarController() {
   //       ctrl.error = reason.message;
   //     });
   // };
+// =======
+// function SearchBarController(SearchService, $state) {
+//   var ctrl = this;
+//   ctrl.$onChanges = function (changes) {
+//     if (changes.keyword) {
+//       ctrl.keyword = angular.copy(ctrl.keyword);
+//     }
+//   };
+//   ctrl.submit = function () {
+//     $state.go('results');
+//   };
+// >>>>>>> 8fb7b7d061dd1ff0b4e8ce7ebac290d972b054c2
 }
 
 angular
