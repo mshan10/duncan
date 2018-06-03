@@ -1,7 +1,6 @@
 var searchBar = {
   bindings: {
     keyword: '<',
-    button: '@',
     onSubmit: '&'
   },
   templateUrl: './search-bar.html',
@@ -11,21 +10,10 @@ var searchBar = {
 angular
   .module('components.search')
   .component('searchBar', searchBar)
-  // .config(function ($stateProvider) {
-	// 	$stateProvider
-	// 		.state('search', {
-  //       parent: 'app',
-	// 			url: '/search',
-	// 			component: 'search'
-  //
-	// 			// template: '<search></search>'
-	// 		});
-	// 	// $urlRouterProvider.otherwise('/app');
-	// });
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('search', {
-        redirectTo: 'search.searchBar',
+        // redirectTo: 'search.searchBar',
         parent: 'app',
         url: '/search',
         template: '<div ui-view></div>'
