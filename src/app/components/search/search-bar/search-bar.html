@@ -1,14 +1,14 @@
-<div class="search align-items-center">
+<div class="search align-items-center"  ng-submit="ctrl.submitKeyword();">
     <div class="row col-12 justify-content-around">
         <h1>Duncan</h1>
     </div>
     <div class="row col-12 justify-content-around">
         <div>
-            <input id="search" type="text" class="form-control search-input" ng-model="$ctrl.searchInput"/>
+            <input id="search" type="text" class="form-control search-input" ng-model="$ctrl.keyword"/>
         </div>
     </div>
     <div class="row col-12 justify-content-around">
-            <a class="btn btn-ghost search-btn" ng-click="$ctrl.submitKeyword()" ui-sref="searchResults">Search</a>
+            <a class="btn btn-ghost search-btn" ng-click="$ctrl.submitKeyword();" ui-sref="search.searchResults">Search</a>
     </div>
 </div>
 

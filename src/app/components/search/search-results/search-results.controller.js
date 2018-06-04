@@ -1,6 +1,6 @@
 function SearchResultsController() {
   var ctrl = this;
-  this.submitKeyword = function (event) {
+  ctrl.submitKeyword = function (event) {
     this.keyword = event.keyword;
   };
 }

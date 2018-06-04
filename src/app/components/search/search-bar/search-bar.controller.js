@@ -1,14 +1,16 @@
 function SearchBarController($state) {
   var ctrl = this;
-  ctrl.$onChanges = function (changes) {
-    if (changes.keyword) {
-      this.keyword = angular.copy(this.keyword);
-    }
-  };
+  // ctrl.$onChanges = function (changes) {
+  //   if (changes.keyword) {
+  //     ctrl.keyword = angular.copy(ctrl.keyword);
+  //   }
+  //   console.log(this.keyword);
+  // };
   ctrl.submitKeyword = function () {
+    console.log(ctrl.keyword);
     this.onSubmit({
       $event: {
-        keyword: this.keyword
+        keyword: ctrl.keyword
       }
     })
   };
