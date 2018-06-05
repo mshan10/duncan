@@ -1,4 +1,4 @@
-function SearchBarController($state) {
+function SearchBarController(SearchService, $state) {
   var ctrl = this;
   // ctrl.$onChanges = function (changes) {
   //   if (changes.keyword) {
@@ -8,13 +8,10 @@ function SearchBarController($state) {
   // };
   ctrl.submitKeyword = function () {
     console.log(ctrl.keyword);
-    this.onSubmit({
-      $event: {
-        keyword: ctrl.keyword
-      }
-    })
-  };
-}
+    return SearchService
+      .navParse(ctrl.keyword)
+    };
+};
 
 angular
   .module('components.search')

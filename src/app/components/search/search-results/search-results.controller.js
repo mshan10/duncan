@@ -1,8 +1,10 @@
-function SearchResultsController() {
+function SearchResultsController(SearchService) {
   var ctrl = this;
-  ctrl.submitKeyword = function (event) {
-    this.keyword = event.keyword;
-  };
+  console.log(ctrl.searchResult.keyword)
+  // ctrl.submitKeyword = function (event) {
+  //   this.keyword = event.keyword;
+  //   console.log("success")
+  // };
 }
 
 angular
