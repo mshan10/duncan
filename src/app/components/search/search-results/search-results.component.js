@@ -8,8 +8,9 @@ angular
   .component('searchResults', searchResults)
   .config(function ($stateProvider) {
     $stateProvider
-      .state('search.searchResults', {
-        url: '/seach-results',
+      .state('searchResults', {
+        parent: 'search',
+        url: '/search-results',
         component: 'searchResults'
       });
   });

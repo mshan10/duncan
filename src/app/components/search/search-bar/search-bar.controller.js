@@ -7,9 +7,9 @@ function SearchBarController(SearchService, $state) {
   //   console.log(this.keyword);
   // };
   ctrl.submitKeyword = function () {
-    console.log(ctrl.keyword);
+    // console.log(ctrl.keyword);
     return SearchService
-      .navParse(ctrl.keyword)
+      .navParse(ctrl.searchInput)
     };
 };
 

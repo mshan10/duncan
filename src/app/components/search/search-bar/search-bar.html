@@ -4,11 +4,11 @@
     </div>
     <div class="row col-12 justify-content-around">
         <div>
-            <input id="search" type="text" class="form-control search-input" ng-model="$ctrl.keyword"/>
+            <input id="search" type="text" class="form-control search-input" ng-model="$ctrl.searchInput"/>
         </div>
     </div>
     <div class="row col-12 justify-content-around">
-            <a class="btn btn-ghost search-btn" type="submit" ui-sref="search.searchResults" ng-click="$ctrl.submitKeyword();">Search</a>
+            <a class="btn btn-ghost search-btn" ng-click="$ctrl.submitKeyword();" ui-sref="searchResults" >Search</a>
     </div>
 </div>
 

@@ -1,6 +1,6 @@
 var searchBar = {
   bindings: {
-    keyword: '<',
+    searchInput: '<',
     onSubmit: '&'
   },
   templateUrl: './search-bar.html',

@@ -1,10 +1,19 @@
 function SearchResultsController(SearchService) {
   var ctrl = this;
-  console.log(ctrl.searchResult.keyword)
+  // ctrl.result = SearchService.searchResult
   // ctrl.submitKeyword = function (event) {
   //   this.keyword = event.keyword;
   //   console.log("success")
   // };
+
+  // ctrl.result = SearchService.searchResult
+  while ({} == SearchService.searchResult) {
+
+    console.log('loading...');
+  };
+
+  console.log(SearchService.searchResult);
+
 }
 
 angular
