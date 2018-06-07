@@ -7,11 +7,7 @@ function SearchResultsController(SearchService) {
   // };
 
   // ctrl.result = SearchService.searchResult
-  while ({} == SearchService.searchResult) {
-
-    console.log('loading...');
-  };
-
+  
   console.log(SearchService.searchResult);
 
 }

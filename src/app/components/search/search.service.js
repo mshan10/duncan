@@ -12,6 +12,7 @@ function SearchService(Parse) {
   //   console.log(ctrl.searchResult.keyword);
   //   return ctrl.searchResult
 
+  console.log(ctrl.searchResult);
   // // Including pointers
   query.include("hours")
   query.include("floorImage")
@@ -23,8 +24,8 @@ function SearchService(Parse) {
 
       // Converting Parse objects to readable angular objects
       Parse.defineAttributes(result, ['keyword', 'roomNumber', 'floorNumber', 'hours', 'floorImage']);
-      // Parse.defineAttributes(result.hours, ['startTime', 'endTime']);
-      // Parse.defineAttributes(result.floorImage, ['floorImage']);
+      Parse.defineAttributes(result.hours, ['startTime', 'endTime']);
+      Parse.defineAttributes(result.floorImage, ['floorImage']);
 
       // // Calls Moment - Time library
       // ctrl.startTime = moment(result.hours.startTime).add(5, 'hours').format('LTS');
