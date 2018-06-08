@@ -1,14 +1,17 @@
 function SearchResultsController(SearchService) {
   var ctrl = this;
-  // ctrl.result = SearchService.searchResult
+  ctrl.result = SearchService.searchResult;
+  console.log(SearchService.searchResult)
   // ctrl.submitKeyword = function (event) {
   //   this.keyword = event.keyword;
   //   console.log("success")
   // };
 
   // ctrl.result = SearchService.searchResult
-  
-  console.log(SearchService.searchResult);
+
+  // setTimeout(function(){
+  //   console.log(SearchService.navParse;
+  // }, 500);
 
 }
 

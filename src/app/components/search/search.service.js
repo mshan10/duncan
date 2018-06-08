@@ -1,24 +1,14 @@
 function SearchService(Parse) {
-
+  var self = this;
   // PARSE QUERY to get data
+
+  // // Including pointers
   var Keyword = Parse.Object.extend("Keyword")
   var query = new Parse.Query(Keyword) // Targets "Keyword" class in Parse
-  var ctrl = this;
 
-  ctrl.searchResult = {};
-  //
-  // ctrl.navParse = function(keyword) {
-  //   ctrl.searchResult.key = keyword;
-  //   console.log(ctrl.searchResult.keyword);
-  //   return ctrl.searchResult
-
-  console.log(ctrl.searchResult);
-  // // Including pointers
-  query.include("hours")
-  query.include("floorImage")
-
+   // Including pointers
   //Function grabs data for searched keyword
-  ctrl.navParse = function(searchInput) {
+  self.navParse = function(searchInput) {
     query.equalTo("keyword", searchInput)
     query.first().then(function(result) {
 
@@ -27,14 +17,14 @@ function SearchService(Parse) {
       Parse.defineAttributes(result.hours, ['startTime', 'endTime']);
       Parse.defineAttributes(result.floorImage, ['floorImage']);
 
-      // // Calls Moment - Time library
+      // Calls Moment - Time library
       // ctrl.startTime = moment(result.hours.startTime).add(5, 'hours').format('LTS');
       // ctrl.endTime = moment(result.hours.endTime).add(5, 'hours').format('LTS');
 
       //searchResult made accessible to the view
-      ctrl.searchResult = result;
-      console.log(ctrl.searchResult);
-      return ctrl.searchResult
+      self.searchResult = result;
+      console.log(self.searchResult);
+      return self.searchResult
     })
   }
 };
