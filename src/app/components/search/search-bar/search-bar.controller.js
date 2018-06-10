@@ -12,7 +12,9 @@ function SearchBarController(SearchService, $state) {
   }
   ctrl.navResult = function() {
     console.log("success!");
+    // setTimeout(function () {
     $state.go('searchResults');
+      // }, 500);
   };
 };
 

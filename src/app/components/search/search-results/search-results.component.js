@@ -1,4 +1,7 @@
 var searchResults = {
+  bindings: {
+    results: '<'
+  },
   templateUrl: './search-results.html',
   controller: 'SearchResultsController'
 };
@@ -11,6 +14,11 @@ angular
       .state('searchResults', {
         parent: 'search',
         url: '/search-results',
-        component: 'searchResults'
+        component: 'searchResults',
+        resolve: {
+          results: function(SearchService) {
+            return SearchService.searchResult;
+          }
+        }
       });
   });

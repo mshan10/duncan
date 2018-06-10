@@ -1,6 +1,7 @@
 function SearchResultsController(SearchService) {
     var ctrl = this;
     ctrl.result = SearchService.searchResult;
+    console.log(SearchService.searchResult)
 
     // ctrl.submitKeyword = function (event) {
     //   this.keyword = event.keyword;
@@ -9,9 +10,9 @@ function SearchResultsController(SearchService) {
 
     // ctrl.result = SearchService.searchResult
 
-    setTimeout(function () {
-      ctrl.result = SearchService.searchResult;
-        }, 500);
+//     setTimeout(function () {
+//       ctrl.result = SearchService.searchResult;
+//         }, 500);
 }
 
 angular

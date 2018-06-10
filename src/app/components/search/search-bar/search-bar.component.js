@@ -20,10 +20,7 @@ angular
       })
       .state('search.searchBar', {
         url: '/search-bar',
-        component: 'searchBar',
-        resolve: {
-          
-        }
+        component: 'searchBar'
       });
     $urlRouterProvider.otherwise('/search/search-bar');
   });
