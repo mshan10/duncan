@@ -1,4 +1,41 @@
-<div>
+<!-- <div>
   <h1> HELLO</h1>
   <h2>{{ $ctrl.result.floorNumber }}</h2>
+</div> -->
+
+<div class="row results-page">
+    <div class="card results-card">
+
+        <div class="card-heading">Search Results For "{{ $ctrl.result.keyword }}"</div>
+
+        <ul class="list-group result-list">
+            <li class="list-group-item"> Floor number: <p>{{ $ctrl.result.floorNumber }}</p></li>
+            <li class="list-group-item"> Room number: <p>{{ $ctrl.result.roomNumber }}</p></li>
+            <li class="list-group-item"> Hours of operation: <p>{{ $ctrl.result.startTime }} - {{ $ctrl.result.endTime }}</p></li>
+        </ul>
+
+        <center><img ng-src="{{ $ctrl.result.floorImage.floorImage._url }}" style="width: 90%; padding: 10px;"></center>
+        <center><a ui-sref="search.searchBar"><p>Back to search</p></a></center>
+
+    </div>
+
+     <div class="card email-card">
+
+        <div class="card-header">Sign up for DuncanUPDATES!</div>
+        <div class="card-text">Receive weekly emails on events you're interested in! Enter you name and email below to join.</div>
+
+            <div class="input-details">
+                <div class="form-group">
+                    <label for="userName">Name</label>
+                    <input style="width: 90%" type="name" class="form-control" id="userName" placeholder="eg. Max Wilson" ng-model="userName">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input style="width: 90%" type="email" class="form-control" id="userEmail" placeholder="eg. maxWilson@gmail.com" ng-model="userEmail">
+                </div>
+                <a class="btn btn-full" href="#/successful.html" ng-click = "userInput()">Submit</a>
+
+            </div>
+    </div>
+
 </div>

@@ -107,7 +107,7 @@ nav a img {
 nav a:link,
 nav a:visited {
     color: #fff;
-    font-weight: 100;
+    font-weight: 300;
     text-decoration: none;
     font-size: 140%;
     margin: 5px;
@@ -172,7 +172,6 @@ nav a:active {
 .search-btn {
     width: 200px;
 }
-
 /* ---------------------------------- */
 /* FOOTER */
 /* ---------------------------------- */
@@ -261,7 +260,7 @@ footer p {
     width: 80%;
     text-align: center;
     margin: 0 0 0 10%;
-    padding-top: 13%;
+    padding-top: 5%;
 
 }
 
@@ -283,6 +282,82 @@ h1 {
 
 input {
     width: 90px;
+}
+/* RESULTS */
+.results-page {
+  color: #192a56;
+}
+
+.results-card {
+  float: left;
+  width: 50%;
+  padding: 30px;
+  margin: 40px;
+  border: 2px solid #C99700;
+  background-color: #efefef;
+}
+
+.results-card .card-heading {
+  padding-bottom: 20px;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.result-list {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+center p {
+  padding-top: 15px;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.email-card {
+  width: 35%;
+  height: 540px;
+  float: right;
+  margin: 150px 40px;
+  border: 2px solid #C99700;
+
+
+}
+
+.email-card .card-header {
+  font-size: 40px;
+  background-color: #192a56;
+  color: #fff;
+  text-align: center;
+}
+
+.email-card .card-text {
+  padding: 10px 25px;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.input-details {
+  padding-left: 30px;
+  /* padding-right: 35px; */
+    font-size: 20px;
+}
+
+.email-card label {
+  margin-bottom: 8px;
+  border-bottom: 2px solid #C99700;
+}
+
+.input-details a {
+  width: 40%;
+  margin: 1px 0 20px 100px;
+}
+
+
+li p {
+  display: inline;
+  color: #C99700;
 }
 
 

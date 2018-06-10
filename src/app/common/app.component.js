@@ -6,7 +6,7 @@ var app = {
 angular
   .module('common')
   .component('app', app)
-  .config(function ($stateProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('app', {
         // redirectTo: 'search',
@@ -15,5 +15,6 @@ angular
         //   requiredAuth: true
         // },
         component: 'app'
-      })
+      });
+    $urlRouterProvider.otherwise('app/search/search-bar');
   });
