@@ -1,6 +1,6 @@
 var searchResults = {
   bindings: {
-    results: '<'
+    presults: '<'
   },
   templateUrl: './search-results.html',
   controller: 'SearchResultsController'
@@ -16,8 +16,8 @@ angular
         url: '/search-results',
         component: 'searchResults',
         resolve: {
-          results: function(SearchService) {
-            return SearchService.searchResult;
+          presults: function(SearchService) {
+            return SearchService.navParse();
           }
         }
       });

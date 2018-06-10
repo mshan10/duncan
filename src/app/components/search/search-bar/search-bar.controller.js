@@ -4,7 +4,7 @@ function SearchBarController(SearchService, $state) {
   ctrl.submitKeyword = function () {
     console.log(ctrl.searchInput);
     return SearchService
-      .navParse(ctrl.searchInput)
+      .saveKeyword(ctrl.searchInput)
       // console.log(SearchService.navParse(ctrl.searchInput));
     // }.then(function() {
     //   $state.go('searchResults')

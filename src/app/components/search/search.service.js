@@ -8,35 +8,31 @@ function SearchService(Parse) {
 
    // Including pointers
   //Function grabs data for searched keyword
-  self.navParse = function(searchInput) {
-
-    query.equalTo("keyword", searchInput);
-    query.find().then(
-      function(results) {
-      console.log(results);
-      self.data = results;
-    });
+  var key;
+  self.saveKeyword = function(searchInput) {
+    console.log(searchInput);
+    key = searchInput;
   }
 
-  // self.navParse = function(searchInput) {
-  //   query.equalTo("keyword", searchInput)
-  //   query.first().then(function(result) {
-  //
-  //     // Converting Parse objects to readable angular objects
-  //     Parse.defineAttributes(result, ['keyword', 'roomNumber', 'floorNumber', 'hours', 'floorImage']);
-  //     Parse.defineAttributes(result.hours, ['startTime', 'endTime']);
-  //     Parse.defineAttributes(result.floorImage, ['floorImage']);
-  //
-  //     // Calls Moment - Time library
-  //     // ctrl.startTime = moment(result.hours.startTime).add(5, 'hours').format('LTS');
-  //     // ctrl.endTime = moment(result.hours.endTime).add(5, 'hours').format('LTS');
-  //
-  //     //searchResult made accessible to the view
-  //     self.searchResult = result;
-  //     console.log(self.searchResult);
-  //     return self.searchResult
-  //   })
-  // }
+  self.navParse = function() {
+    query.equalTo("keyword", key)
+    return query.first().then(function(result) {
+
+      // Converting Parse objects to readable angular objects
+      Parse.defineAttributes(result, ['keyword', 'roomNumber', 'floorNumber', 'hours', 'floorImage']);
+      Parse.defineAttributes(result.hours, ['startTime', 'endTime']);
+      Parse.defineAttributes(result.floorImage, ['floorImage']);
+
+      // Calls Moment - Time library
+      // ctrl.startTime = moment(result.hours.startTime).add(5, 'hours').format('LTS');
+      // ctrl.endTime = moment(result.hours.endTime).add(5, 'hours').format('LTS');
+
+      //searchResult made accessible to the view
+      self.data = result;
+      console.log(self.data);
+    })
+  }
+
 };
 
 angular

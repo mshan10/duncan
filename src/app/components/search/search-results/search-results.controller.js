@@ -1,7 +1,7 @@
 function SearchResultsController(SearchService) {
     var ctrl = this;
-    ctrl.result = SearchService.searchResult;
-    console.log(SearchService.searchResult)
+    ctrl.result = SearchService.data;
+    console.log(SearchService.data)
 
     // ctrl.submitKeyword = function (event) {
     //   this.keyword = event.keyword;
