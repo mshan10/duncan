@@ -1,42 +1,17 @@
-function SearchResultsController(SearchService) {
+function SearchResultsController(SearchService, $filter) {
     var ctrl = this;
     ctrl.result = SearchService.data;
     console.log(SearchService.data)
 
-    // ctrl.submitKeyword = function (event) {
-    //   this.keyword = event.keyword;
-    //   console.log("success")
-    // };
-
-    // ctrl.result = SearchService.searchResult
-
-//     setTimeout(function () {
-//       ctrl.result = SearchService.searchResult;
-//         }, 500);
+    ctrl.submitUser = function() {
+      var userName = $filter('lowercase')(ctrl.userName);
+      var userEmail = ctrl.userEmail;
+      console.log(userName);
+      SearchService.signUp(userName, userEmail);
+      $state.go('events');
+    };
 }
 
 angular
     .module('components.search')
     .controller('SearchResultsController', SearchResultsController);
-
-
-// var statefulComponent = {
-// 	template: `
-// 		<div>
-// 			<pre>{{ $ctrl.user | json }}</pre>
-// 			<stateless-component
-// 				user="$ctrl.user"
-// 				on-update="$ctrl.updateUser($event);">
-// 			</stateless-component>
-// 		</div>
-// 	`,
-// 	controller: function () {
-// 		this.user = {
-// 			name: 'Todd Motto',
-// 			location: 'England, UK'
-// 		};
-// 		this.updateUser = function (event) {
-// 			this.user = event.user;
-// 		};
-// 	}
-// };

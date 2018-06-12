@@ -35,6 +35,25 @@ function SearchService(Parse) {
     })
   }
 
+  self.signUp = function(userName, userEmail) {
+    var userData = new Parse.Object('Email') // Targets "Email" class in Parse
+    Parse.defineAttributes(userData, ['name', 'email', 'keywordString'])
+    userData.name = userName; // Makes user inputted name lowercase before saving to Parse
+    userData.email = userEmail;
+    // userData.keywordString = duncanService.searchInput; // User input into search box  == keyword stored in parse
+
+    userData.save(null, {
+
+        success: function(userData) {
+        },
+
+        error: function(userData, error) {
+        }
+
+    });
+
+  }
+
 };
 
 angular
