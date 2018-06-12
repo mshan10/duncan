@@ -27,11 +27,11 @@
             <div class="input-details">
                 <div class="form-group">
                     <label for="userName">Name</label>
-                    <input style="width: 90%" type="name" class="form-control" id="userName" placeholder="eg. Max Wilson" ng-model="userName">
+                    <input style="width: 90%" type="name" class="form-control" id="userName" placeholder="eg. Max Wilson" ng-model="$ctrl.userName">
                 </div>
                 <div class="form-group">
                     <label for="userEmail">Email address</label>
-                    <input style="width: 90%" type="email" class="form-control" id="userEmail" placeholder="eg. maxWilson@gmail.com" ng-model="userEmail">
+                    <input style="width: 90%" type="email" class="form-control" id="userEmail" placeholder="eg. maxWilson@gmail.com" ng-model="$ctrl.userEmail">
                 </div>
                 <a class="btn btn-full" href="#/successful.html" ng-click = "$ctrl.submitUser()">Submit</a>
 

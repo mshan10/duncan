@@ -1,4 +1,4 @@
-function SearchResultsController(SearchService, $filter) {
+function SearchResultsController(SearchService, $filter, $state) {
     var ctrl = this;
     ctrl.result = SearchService.data;
     console.log(SearchService.data)
