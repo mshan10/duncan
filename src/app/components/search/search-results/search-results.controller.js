@@ -8,7 +8,7 @@ function SearchResultsController(SearchService, $filter, $state) {
       var userEmail = ctrl.userEmail;
       console.log(userName);
       SearchService.signUp(userName, userEmail);
-      $state.go('events');
+      $state.go('userSignup');
     };
 }
 

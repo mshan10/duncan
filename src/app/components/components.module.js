@@ -1,5 +1,6 @@
 angular
   .module('components', [
     'components.search',
-    'components.events'
+    'components.events',
+    'components.userSignup'
   ]);

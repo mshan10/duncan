@@ -20,5 +20,5 @@ angular
             return SearchService.navParse();
           }
         }
-      });
+      })
   });
