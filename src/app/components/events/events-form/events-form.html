@@ -1,9 +1,10 @@
-
 <div class="col-6 offset-3">
     <div class="card event-card rounded">
 
-       <div class="card-heading rounded-top"><p>Events</p></div>
-       <div class="card-body rounded-bottom">
+        <div class="card-heading rounded-top">
+            <p>Events</p>
+        </div>
+        <div class="card-body rounded-bottom">
             <form name="eventForm" class="needs-validation">
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -14,55 +15,40 @@
                     <input type="text" class="form-control" id="location" placeholder="eg. W210" ng-model="$ctrl.location" required/>
                 </div>
                 <div class="form-group">
-                  <div class="row">
-                    <label for="eventStartTime" class ='col-6 text-left'>Start Time</label>
-                    <label for="eventEndTime" class ='col-6'>End Time</label>
-                  </div>
+                    <div class="row">
+                        <label for="eventStartTime" class='col-6 text-left'>Start Time</label>
+                        <label for="eventEndTime" class='col-6'>End Time</label>
+                    </div>
                     <div class="row time-input">
                         <div class='col-6'>
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepicker1" data-target-input="nearest" ng-model="$ctrl.eventStartTime">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
                                     <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                     </div>
                                 </div>
-                                <!-- <div class='input-group date' id='datetimepicker1' ng-model="eventStartTime">
-                                    <input type='text' class="form-control" required/>
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div> -->
                             </div>
                         </div>
                         <div class='col-6'>
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepicker2" data-target-input="nearest" ng-model="$ctrl.eventEndTime">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" />
                                     <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                     </div>
                                 </div>
-                                <!-- <div class='input-group date' id='datetimepicker2' ng-model="eventEndTime">
-                                    <input type='text' class="form-control" required/>
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div> -->
                             </div>
                         </div>
                         <script type="text/javascript">
                             $(function () {
-                                $('#datetimepicker1').datetimepicker();
-                                $('#datetimepicker2').datetimepicker();
+                                $('#datetimepicker1')
+                                    .datetimepicker();
+                                $('#datetimepicker2')
+                                    .datetimepicker();
                             });
+
                         </script>
-                        <!-- <script type="text/javascript">
-                            $(function () {
-                                $('#datetimepicker1').datetimepicker();
-                                $('#datetimepicker2').datetimepicker();
-                            });
-                        </script> -->
                     </div>
                 </div>
 
@@ -75,9 +61,9 @@
                     <textarea class="form-control" rows="5" id="description" ng-model="$ctrl.description" required></textarea>
                 </div>
                 <h6>* All fields required</h6>
-                <button class="btn btn-full" style="margin-top: 15px;" href="#/eventSuccess.html" ng-disabled="eventForm.$invalid" ng-click="eventInput()">Submit</button>
+                <button class="btn btn-full" style="margin-top: 15px;" href="#/eventSuccess.html" ng-disabled="eventForm.$invalid" ng-click="$ctrl.eventInput()">Submit</button>
 
             </form>
-          </div>
+        </div>
     </div>
 </div>

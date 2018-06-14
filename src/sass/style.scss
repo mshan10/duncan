@@ -381,6 +381,74 @@ li p {
   padding: 40px 30px;
   font-size: 120%;
 }
+
+/* EVENT PAGE */
+
+.event-card {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: transparent;
+  color: #192a56;
+  border-radius: 30px;
+}
+
+.event-card .card-heading {
+    text-align: center;
+    background-color: rgba(25, 42, 86, 0.90);
+    color: #fff;
+    font-size: 250%;
+    font-weight: 300;
+    padding: 8px 0 14px 0;
+    border: 2px solid #C99700;
+
+}
+
+.event-card .card-heading p {
+  display: inline;
+  border-bottom: 1px solid #C99700;
+}
+
+.event-card .card-body {
+  background-color: rgba(255, 255, 255, 0.78);
+  padding: 20px 40px;
+  font-size: 110%;
+  font-weight: 400;
+}
+
+.time-input {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.event-card input,
+.event-card textarea {
+  font-size: 80%;
+    font-weight: 300;
+}
+
+.event-card .col-6 {
+  padding-left: 0;
+}
+
+h6 {
+  color: #C99700;
+    font-size: 70%;
+    font-weight: 300;
+}
+
+.event-card button {
+  width: 50%;
+  margin: 15px 0 20px 130px;
+  color: #fff;
+  border-radius: 20px;
+  background-color: #C99700;
+}
+
+.event-card button:disabled {
+  background-color: rgba(199, 149, 0, 0.65);
+    color: #fff;
+}
+
 /**
  *
  */

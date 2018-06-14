@@ -1,5 +1,5 @@
 var eventsForm = {
-    templateUrl: './events-form.html'
+    templateUrl: './events-form.html',
     controller: 'EventsFormController'
 };
 

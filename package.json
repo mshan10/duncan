@@ -17,6 +17,8 @@
     "angular-loading-bar": "^0.9.0",
     "angular-messages": "~1.5.8",
     "angular-parse": "^0.2.2",
+    "datetimepicker": "^0.1.38",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "moment": "^2.18.1",
     "parse": "^1.11.1"
   },
