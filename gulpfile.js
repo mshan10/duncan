@@ -36,7 +36,8 @@ var argv = yargs.argv,
     'parse/dist/parse.min.js',
     'angular-parse/angular-parse.js',
     'moment/min/moment.min.js',
-    'node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
+    'jquery/dist/jquery.min.js',
+    'eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
   ]; // these are 3rd party libraries in the node_modules folder NOT *.module.js files
 
 /* utility function to generate Unix DateTime Stamp */
