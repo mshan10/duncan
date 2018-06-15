@@ -1,6 +1,5 @@
 var userSignup = {
   templateUrl: './userSignup.html'
-  // controller: 'SearchResultsController'
 };
 
 angular

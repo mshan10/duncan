@@ -61,7 +61,7 @@
                     <textarea class="form-control" rows="5" id="description" ng-model="$ctrl.description" required></textarea>
                 </div>
                 <h6>* All fields required</h6>
-                <button class="btn btn-full" style="margin-top: 15px;" href="#/eventSuccess.html" ng-disabled="eventForm.$invalid" ng-click="$ctrl.eventInput()">Submit</button>
+                <a class="btn btn-full" style="margin-top: 15px;" href="#"  ng-disabled="eventForm.$invalid" ng-click="$ctrl.eventInput(); $ctrl.navResult();">Submit</a>
 
             </form>
         </div>

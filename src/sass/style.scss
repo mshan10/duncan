@@ -422,6 +422,7 @@ li p {
 
 .event-card input,
 .event-card textarea {
+  width: 100%;
   font-size: 80%;
     font-weight: 300;
 }
@@ -436,7 +437,7 @@ h6 {
     font-weight: 300;
 }
 
-.event-card button {
+.event-card a {
   width: 50%;
   margin: 15px 0 20px 130px;
   color: #fff;
@@ -444,7 +445,7 @@ h6 {
   background-color: #C99700;
 }
 
-.event-card button:disabled {
+.event-card a:disabled {
   background-color: rgba(199, 149, 0, 0.65);
     color: #fff;
 }
