@@ -1,6 +1,6 @@
 # Duncan Project
 
-This repo serves as the seed project for the Parse Auth Module to learn advanced Angular 1.5 architecture and components!
+This repo is a directory application for the Duncan Student Center at Notre Dame! (Only certain keywords are searchable for now)
 
 ## To Install:
 
